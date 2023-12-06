@@ -1,4 +1,3 @@
-
 class Item
   attr_accessor :id, :published_date, :archived
   attr_reader :genre, :author
@@ -30,9 +29,9 @@ class Item
   def move_to_archive
     if can_be_archived?
       @archived = true
-      puts "Item has been archived."
+      puts 'Item has been archived.'
     else
-      puts "Item cannot be archived at this time."
+      puts 'Item cannot be archived at this time.'
     end
   end
 end

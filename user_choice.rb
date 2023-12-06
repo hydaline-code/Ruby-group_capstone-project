@@ -1,5 +1,3 @@
-
-
 def make_choice(choice, item)
   case choice
   when 1
@@ -15,16 +13,16 @@ def make_choice(choice, item)
     move_to_archive(item)
 
   when 5
-    puts "Quitting the app. Seeyou Next time!"
+    puts 'Quitting the app. Seeyou Next time!'
     exit
 
   else
-    puts "Invalid choice. Please choose a valid option."
+    puts 'Invalid choice. Please choose a valid option.'
   end
 end
 
 def display_item_info(item)
-  puts "Item Information:"
+  puts 'Item Information:'
   puts "ID: #{item.id}"
   puts "Genre: #{item.genre}"
   puts "Author: #{item.author}"
@@ -33,17 +31,17 @@ def display_item_info(item)
 end
 
 def add_genre(item)
-  puts "Enter genre:"
+  puts 'Enter genre:'
   new_genre = gets.chomp
   item.add_genre(new_genre)
-  puts "Genre added successfully."
+  puts 'Genre added successfully.'
 end
 
 def add_author(item)
-  puts "Enter author:"
+  puts 'Enter author:'
   new_author = gets.chomp
   item.add_author(new_author)
-  puts "Author added successfully."
+  puts 'Author added successfully.'
 end
 
 def move_to_archive(item)
