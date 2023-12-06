@@ -3,6 +3,6 @@ require_relative 'user_choice'
 
 loop do
   display_options
-  choice = gets.chomp.to_i 
+  choice = gets.chomp.to_i
   Choices.options(choice)
 end

@@ -1,11 +1,12 @@
 # item.rb
 class Item
-  attr_accessor :id, :title, :description, :published_date, :archived
+  attr_accessor :id, :genre, :author, :label, :published_date
+  attr_reader :archived
 
-  def initialize(id, title, description, published_date)
+  def initialize(id, author, _genre, label, published_date)
     @id = id
-    @title = title
-    @description = description
+    @author = author
+    @label = label
     @published_date = published_date
     @archived = false
   end
