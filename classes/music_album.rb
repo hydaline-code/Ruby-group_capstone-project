@@ -1,5 +1,3 @@
-require './item'
-
 class MusicAlbum < Item
   attr_reader :on_spotify
 
