@@ -13,7 +13,9 @@ require './operations/book_operations'
 # require './operations/file_operations'
 require './operations/item_operations'
 
-items = []
+
+
+items = [  Label.new(nil, 'Label 1', 'Green') ]
 
 puts 'Welcome to the Cataloge of my things'
 
