@@ -1,5 +1,4 @@
 def add_book(items)
-  puts "\nAdding a Book:"
   print 'Enter Book Title: '
   title = gets.chomp
   print 'Enter Author: '
@@ -11,10 +10,9 @@ def add_book(items)
   print 'Enter Publisher: '
   publisher = gets.chomp
 
-  # new_book_id = items.empty? ? 1 : items.max_by(&:id).id + 1
   new_book = Book.new(nil, title, author, published_date, cover_state, publisher)
 
   items << new_book
-  puts "Book with ID #{new_book.id} added successfully!"
+  puts "Book  added successfully!"
 end
 
