@@ -11,8 +11,6 @@ def add_book(items)
   publisher = gets.chomp
 
   new_book = Book.new(nil, title, author, published_date, cover_state, publisher)
-
   items << new_book
-  puts "Book  added successfully!"
+  puts 'Book  added successfully!'
 end
-
