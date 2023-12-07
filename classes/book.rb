@@ -1,14 +1,22 @@
+
 require_relative 'item'
 
 class Book < Item
-  attr_accessor :cover_state
+  attr_accessor :cover_state, :publisher, :author
 
-  def initialize (id, genre, author, published_date, cover_state)
-    super(id, genre, author, published_date)
-    @cover_state =cover_state
+  def initialize(id, title, author, published_date, cover_state, publisher)
+    super(id, title, published_date)
+    @cover_state = cover_state
+    @publisher = publisher
+    @id ||= Random.rand(100..1000)
   end
 
   def can_be_archived?
     super || @cover_state == 'bad'
   end
+
 end
+
+
+
+

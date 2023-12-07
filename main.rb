@@ -11,9 +11,16 @@ require './classes/game'
 # require './operations/music_operations'
 # require './operations/game_operations'
 # require './operations/file_operations'
-# require './operations/item_operations'
+require './operations/item_operations'
 
-# items = load_items_from_json
+def create_sample_items
+  [
+    Book.new(nil, 'Fiction', 'John Doe', Time.new(2010, 1, 1), 'Good', 'Publisher ABC'),
+   
+  ]
+end
+
+items = create_sample_items
 
 puts 'Welcome to the Cataloge of my things'
 
