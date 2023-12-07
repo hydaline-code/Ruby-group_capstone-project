@@ -13,14 +13,7 @@ require './operations/book_operations'
 # require './operations/file_operations'
 require './operations/item_operations'
 
-def create_sample_items
-  [
-    Book.new(nil, 'Fiction', 'John Doe', Time.new(2010, 1, 1), 'Good', 'Publisher ABC'),
-   
-  ]
-end
-
-items = create_sample_items
+items = []
 
 puts 'Welcome to the Cataloge of my things'
 
