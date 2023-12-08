@@ -1,5 +1,4 @@
 
-
 def list_labels(items)
   puts "\nList of all Labels:"
   labels = items.select { |item| item.is_a?(Label) }

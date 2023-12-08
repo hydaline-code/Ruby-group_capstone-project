@@ -1,5 +1,5 @@
 class Item
-  attr_accessor
+
   attr_reader :id, :archived
   attr_accessor :id, :genre, :author, :source, :label, :publish_date, :archived,  :title, :publish_date
 
@@ -34,5 +34,10 @@ class Item
   def add_author(author)
     @author = author
     author.add_item(self)
+  end
+  
+  def self.from_json(json)
+    data = JSON.parse(json)
+    new(data['id'], data['title'], data['publish_date'])
   end
 end
