@@ -10,12 +10,80 @@ require './classes/game'
 require './operations/book_operations'
 # require './operations/music_operations'
 # require './operations/game_operations'
-# require './operations/file_operations'
+require './operations/file_operations'
 require './operations/item_operations'
 
-items = [Label.new(nil, 'Label 1', 'Green')]
 
-puts 'Welcome to the Cataloge of my things'
+# def ensure_data_directory
+#   Dir.mkdir(DATA_PATH) unless Dir.exist?(DATA_PATH)
+# end
+
+# DATA_PATH = 'data/'
+
+# ensure_data_directory
+# items = load_data("#{DATA_PATH}items.json", Item, [])
+
+
+# puts 'Welcome to the Cataloge of my things'
+
+# def print_options
+#   puts "\nOptions:"
+#   puts '1. List all books'
+#   puts '2. List all music albums'
+#   puts '3. List of games'
+#   puts '4. List all genres'
+#   puts '5. List all labels'
+#   puts '6. List all authors'
+#   puts '7. Add a book'
+#   puts '8. Add a music album'
+#   puts '9. Add a game'
+#   puts '10. Quit'
+# end
+
+# loop do
+#   print_options
+#   print 'Enter your choice: '
+#   choice = gets.chomp.to_i
+#   case choice
+#   when 1
+#     list_books(items)
+#   when 2
+#     list_music_albums(items)
+#   when 3
+#     list_games(items)
+#   when 4
+#     list_genres(items)
+#   when 5
+#     list_labels(items)
+#   when 6
+#     list_authors(items)
+#   when 7
+#     add_book(items)
+#   when 8
+#     add_music_album(items)
+#   when 9
+#     add_game(items)
+#   when 10
+#     save_data_to_json("#{DATA_PATH}items.json", items)
+#     puts 'Exiting the application. Goodbye!'
+#     break
+#   else
+#     puts 'Invalid choice. Please try again.'
+#   end
+
+  
+# end
+
+DATA_PATH = 'data/'
+
+def ensure_data_directory
+  Dir.mkdir(DATA_PATH) unless Dir.exist?(DATA_PATH)
+end
+
+ensure_data_directory
+items = load_data("#{DATA_PATH}items.json", Item, [])
+
+puts 'Welcome to the Catalogue of my things'
 
 def print_options
   puts "\nOptions:"
@@ -55,7 +123,7 @@ loop do
   when 9
     add_game(items)
   when 10
-    # save_items_to_json(items)
+    save_items_to_json("#{DATA_PATH}items.json", items)
     puts 'Exiting the application. Goodbye!'
     break
   else
