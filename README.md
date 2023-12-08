@@ -9,12 +9,12 @@
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
-    - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
-    - [Install](#install)
-    - [Usage](#usage)
-    - [Run tests](#run-tests)
-  - [👥 Authors ](#-authors-)
+    - [Prerequisites ](#prerequisites-)
+    - [Setup ](#setup-)
+    - [Install ](#install-)
+    - [Usage ](#usage-)
+    - [Run tests ](#run-tests-)
+    - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -26,23 +26,26 @@
 **[Ruby group capstone]** Ruby Group Capstone is a console application that helps users organize and manage their belongings, such as books, music albums, movies, and games. It follows a Unified Modeling Language (UML) class diagram to ensure efficient cataloging and retrieval of item information. The application stores data persistently in JSON files and provides an option to create and manage a corresponding database. The database tables mirror the structure of the program's classes, enabling seamless integration between the application and the database for enhanced data management.
 
 ## 🛠 Built With <a name="built-with"></a>
-<li>Ruby, Visual Studia Code</li>
+Ruby, Visual Studia Code
+
 ### Tech Stack <a name="tech-stack"></a>
-<li>Ruby</li>
-<li>PostgreSQL</li>
 
 <details>
-<summary>Ruby group capstone project  built with Ruby and Visual Studia Code</summary>
- 
+  <summary>Ruby</summary>
 </details>
 
+<details>
+  <summary>PostgreSQL</summary>
+</details>
+
+ 
 ### Key Features <a name="key-features"></a>
 
-<li>[Item Management]</li>
-<li>[Data Organization]</li>
-<li>[Data Storage]</li>
-<li>[User Friendly Interface]</li>
-<li>[Database Integration]</li>
+- **[Item Management]**
+- **[Data Organization]**
+- **[Data Storage]**
+- **[User-Friendly Interface]**
+- **[Database Integration]**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -52,13 +55,13 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need:
 
 - to install Ruby
 
-### Setup
+### Setup <a name="setup"></a>
 
 Clone this repository to your desired folder:
 
@@ -68,29 +71,33 @@ Clone this repository to your desired folder:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Install
+### Install <a name="install"></a>
 
 To install the project's dependencies, run:
 
+```
 bundle install
+```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Usage
+### Usage <a name="usage"></a>
 
 To use,run:
 
-`ruby main.rb`
-`
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+```
+ruby main.rb
+````
 
-### Run tests
+### Run tests <a name="run tests"></a>
 
 To test, run:
 
-`rspec`
-
+```
+rspec
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+### 👥 Authors <a name="authors"></a>
 
   👤 **Surafel Samson**
 - GitHub: [@githubhandle](https://github.com/Surafels)
