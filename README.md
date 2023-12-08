@@ -59,7 +59,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- to install Ruby
+- install Ruby
 
 ### Setup <a name="setup"></a>
 
