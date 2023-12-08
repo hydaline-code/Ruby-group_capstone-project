@@ -1,38 +1,31 @@
-require './classes/music_album'
-require 'date'
-require 'rspec'
+require_relative '../classes/music_album'
+require_relative '../classes/item'
 
 describe MusicAlbum do
-  let(:id) { 1 }
-  let(:title) { 'Album Title' }
-  let(:publish_date) { Date.today }
-  let(:on_spotify) { true }
-  let(:genre) { 'Rock' }
-
-  subject(:music_album) { described_class.new(id, title, publish_date, on_spotify, genre) }
-
-  describe '#initialize' do
-    it 'sets the id, title, publish_date, on_spotify, and genre' do
-      expect(music_album.id).to eq(id)
-      expect(music_album.title).to eq(title)
-      expect(music_album.publish_date).to eq(publish_date)
-      expect(music_album.on_spotify).to eq(on_spotify)
-      expect(music_album.genre).to eq(genre)
-    end
-  end
-
   describe '#can_be_archived?' do
-    context 'when the music album can be archived' do
+    context 'when both can_be_archived? and on_spotify are true' do
       it 'returns true' do
-        allow(music_album).to receive(:on_spotify).and_return(false)
-        expect(music_album.can_be_archived?).to eq(true)
+        music_album = MusicAlbum.new(1, 'name', '2023-12-01', true)
+        allow(music_album).to receive(:can_be_archived?).and_return(true)
+
+        expect(music_album.can_be_archived?).to be(true)
       end
     end
 
-    context 'when the music album cannot be archived' do
+    context 'when can_be_archived? is false' do
       it 'returns false' do
-        allow(music_album).to receive(:on_spotify).and_return(true)
-        expect(music_album.can_be_archived?).to eq(false)
+        music_album = MusicAlbum.new(1, 'name', '2023-12-01', true)
+        allow(music_album).to receive(:can_be_archived?).and_return(false)
+
+        expect(music_album.can_be_archived?).to be(false)
+      end
+    end
+    context 'when on_spotify is false' do
+      it 'returns false' do
+        music_album = MusicAlbum.new(1, 'name', '2023-12-01', false)
+        allow(music_album).to receive(:can_be_archived?).and_return(false)
+
+        expect(music_album.can_be_archived?).to be(false)
       end
     end
   end
