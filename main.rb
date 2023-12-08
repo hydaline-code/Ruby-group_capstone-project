@@ -6,8 +6,15 @@ require './classes/music_album'
 require './operations/music_album_operations'
 require './operations/file_operations'
 require './operations/item_operations'
-items = []
+require './classes/book'
+require './classes/label'
+require './classes/author'
+require './classes/game'
+require './operations/book_operations'
+require './operations/item_operations'
+
 items = load_items_from_json
+items = [Label.new(nil, 'Label 1', 'Green')]
 
 puts 'Welcome to the Cataloge of my things'
 
@@ -49,7 +56,7 @@ loop do
   when 9
     add_game(items)
   when 10
-    save_items_to_json(items)
+     save_items_to_json(items)
     puts 'Exiting the application. Goodbye!'
     break
   else

@@ -13,8 +13,12 @@ def load_items_from_json
   return [] if File.empty?('./data/items.json')
 
   class_mapping = {
+    'Book' => Book,
+    'Label' => Label,
     'MusicAlbum' => MusicAlbum,
     'Genre' => Genre
+     'Game' => Game,
+    'Author' => Author
   }
   json_data = JSON.parse(File.read('./data/items.json'))
 
@@ -25,3 +29,4 @@ def load_items_from_json
     class_mapping[class_name]&.from_json(item_data)
   end.compact
 end
+ 
