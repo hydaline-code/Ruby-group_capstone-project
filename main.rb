@@ -18,8 +18,7 @@ require './operations/item_operations'
 DATA_PATH = 'data/'
 ITEMS_FILE = "#{DATA_PATH}items.json"
 
-# Load data on startup
-items = load_data(ITEMS_FILE, Item, [])
+items = load_data(ITEMS_FILE, [Book, Label], [])
 
 puts 'Welcome to the Catalogue of my things'
 

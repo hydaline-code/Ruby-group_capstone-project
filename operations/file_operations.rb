@@ -10,7 +10,8 @@ def load_data(filename, data_type, container)
     case item_data['type']
     when 'Book'
       Book.from_json(item_data.to_json)
-      
+    when 'Label'
+      Label.from_json(item_data.to_json)
     else
       raise "Unknown item type: #{item_data['type']}"
     end
@@ -21,8 +22,6 @@ rescue StandardError => e
   puts "Error loading data from #{filename}: #{e.message}"
   []
 end
-
-
 
 def save_items_to_json(filename, data)
   save_to_json(filename, data)
