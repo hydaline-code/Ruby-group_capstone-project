@@ -9,7 +9,7 @@ class Genre
   end
 
   def add_item(item)
-    items << item
+    @items << item
   end
 
   def to_json(*_args)

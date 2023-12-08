@@ -3,17 +3,17 @@ require 'date'
 require './classes/item'
 require './classes/genre'
 require './classes/music_album'
-require './operations/music_album_operations'
-require './operations/file_operations'
-require './operations/item_operations'
 require './classes/book'
 require './classes/label'
 require './classes/author'
 require './classes/game'
 require './operations/book_operations'
+require './operations/music_album_operations'
+require './operations/game_operations'
+require './operations/file_operations'
+require './operations/item_operations'
 
 items = load_items_from_json
-items = [Label.new(nil, 'Label 1', 'Green')]
 
 puts 'Welcome to the Cataloge of my things'
 

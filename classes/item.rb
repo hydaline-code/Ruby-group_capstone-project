@@ -11,6 +11,7 @@ class Item
 
   def can_be_archived?
     return false if @publish_date.nil?
+
     return true if (Date.today - @publish_date.to_date).to_i > 3650
 
     false
